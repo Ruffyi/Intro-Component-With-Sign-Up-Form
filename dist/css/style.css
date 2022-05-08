@@ -20,4 +20,16 @@ html {
   font-size: 62.5%;
 }
 
+.main {
+  min-height: 100vh;
+  background-image: url("./../../assets/images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: var(--clr-primary-red);
+}
+@media (max-width: 48rem) {
+  .main {
+    background-image: url("./../../assets/images/bg-intro-mobile.png");
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

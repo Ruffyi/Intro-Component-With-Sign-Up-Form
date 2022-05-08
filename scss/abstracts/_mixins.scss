@@ -1,0 +1,5 @@
+@mixin mediaQuery($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}

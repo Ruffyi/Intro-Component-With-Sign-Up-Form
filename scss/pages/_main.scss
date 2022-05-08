@@ -1,0 +1,9 @@
+.main {
+	min-height: 100vh;
+	background-image: url('./../../assets/images/bg-intro-desktop.png');
+	background-size: cover;
+	background-color: var(--clr-primary-red);
+	@include mediaQuery(map-get($breakpoints-map, '768')) {
+		background-image: url('./../../assets/images/bg-intro-mobile.png');
+	}
+}
