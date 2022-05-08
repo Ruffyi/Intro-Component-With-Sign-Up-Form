@@ -1,0 +1,18 @@
+.btn {
+	cursor: pointer;
+	border: none;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 0 var(--clr-box-shadow);
+	font-family: inherit;
+	&--trial {
+		width: 100%;
+		height: 10%;
+		font-size: 1.4rem;
+		background-color: var(--clr-accent-blue);
+		color: var(--clr-neutral-grayish-blue);
+	}
+	&--text {
+		color: var(--clr-neutral-white);
+		font-weight: 600;
+	}
+}

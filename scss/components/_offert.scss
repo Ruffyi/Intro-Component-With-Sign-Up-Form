@@ -1,0 +1,13 @@
+.offert {
+	@include flex-mother(column, center, space-between);
+	width: 50%;
+	height: 60rem;
+	border-radius: 1rem;
+	@include mediaQuery(map-get($breakpoints-map, '768')) {
+		width: 80%;
+	}
+	@include mediaQuery(map-get($breakpoints-map, '576')) {
+		width: 90%;
+		margin-bottom: 4rem;
+	}
+}

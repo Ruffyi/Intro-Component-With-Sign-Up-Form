@@ -16,4 +16,8 @@ html {
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 	font-size: map-get($fs-map, 'primary');
+    @include mediaQuery(map-get($breakpoints-map, '920')) {
+        font-size: map-get($fs-map, 'second');
+
+	}
 }

@@ -1,9 +1,15 @@
 .main {
+	@include flex-mother();
+	padding: 2rem 8rem;
 	min-height: 100vh;
 	background-image: url('./../../assets/images/bg-intro-desktop.png');
 	background-size: cover;
 	background-color: var(--clr-primary-red);
 	@include mediaQuery(map-get($breakpoints-map, '768')) {
+		flex-direction: column;
 		background-image: url('./../../assets/images/bg-intro-mobile.png');
+	}
+	@include mediaQuery(map-get($breakpoints-map, '576')) {
+		padding: 2rem 1rem;
 	}
 }

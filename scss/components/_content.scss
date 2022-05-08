@@ -1,0 +1,12 @@
+.content {
+	width: 50%;
+	margin-right: 4rem;
+	@include mediaQuery(map-get($breakpoints-map, '768')) {
+		width: 70%;
+		margin-right: 0;
+		text-align: center;
+	}
+	@include mediaQuery(map-get($breakpoints-map, '576')) {
+		width: 90%;
+	}
+}
