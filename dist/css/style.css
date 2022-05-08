@@ -6,6 +6,14 @@
   box-sizing: inherit;
 }
 
+:root {
+  --clr-primary-red: hsl(0deg, 100%, 74%);
+  --clr-primary-green: hsl(154deg, 59%, 51%);
+  --clr-accent-blue: hsl(248deg, 32%, 49%);
+  --clr-neutral-dark-blue: hsl(249deg, 10%, 26%);
+  --clr-neutral-grayish-blue: hsl(246deg, 25%, 77%);
+}
+
 html {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
