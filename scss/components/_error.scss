@@ -1,13 +1,13 @@
 .error {
+	display: none;
 	margin-top: 0.5rem;
 	text-align: right;
 	color: var(--clr-primary-red);
 	font-weight: 600;
 	font-size: 1.1rem;
 	&__icon {
-		position: absolute;
-		right: 0;
-		top: 50%;
+		display: none;
+		@include positioning(absolute, 50%, 0);
 		transform: translate(-50%, -50%);
 	}
 }

@@ -50,6 +50,10 @@ html {
   }
 }
 
+.u-active {
+  display: block !important;
+}
+
 .main {
   display: flex;
   flex-direction: row;
@@ -175,6 +179,7 @@ html {
 }
 
 .error {
+  display: none;
   margin-top: 0.5rem;
   text-align: right;
   color: var(--clr-primary-red);
@@ -182,9 +187,10 @@ html {
   font-size: 1.1rem;
 }
 .error__icon {
+  display: none;
   position: absolute;
-  right: 0;
   top: 50%;
+  right: 0;
   transform: translate(-50%, -50%);
 }
 

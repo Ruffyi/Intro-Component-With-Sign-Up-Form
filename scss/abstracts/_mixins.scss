@@ -14,3 +14,9 @@
 	align-items: $alignItems;
 	justify-content: $justifyContent;
 }
+
+@mixin positioning($position: absolute, $top: 0, $right: 0) {
+	position: $position;
+	top: $top;
+	right: $right;
+}
