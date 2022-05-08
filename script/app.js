@@ -69,6 +69,15 @@
 		}
 	};
 
+	const sendData = () => {
+		submitBtn.innerHTML = `<img class="success" src="./assets/images/icon-success.svg" alt="Success send data" />`;
+		setTimeout(() => {
+			submitBtn.textContent = 'Claim your free trial';
+			clearData();
+			clearInputs();
+		}, 1000);
+	};
+
 	const sendFormToClient = () => {
 		const dataValues = Object.values(data);
 		const checkEmptyValues = checkEmptyValuesArray(dataValues);
@@ -76,9 +85,8 @@
 		renderErrors(checkEmptyValues);
 
 		if (!checkEmptyValues.includes(false)) {
-			console.log('Wysłano :)');
-			clearData();
-			clearInputs();
+			-sendData();
+
 			return;
 		}
 	};

@@ -12,6 +12,7 @@
 		color: var(--clr-neutral-grayish-blue);
 	}
 	&--submit {
+		@include flex-mother();
 		background-color: var(--clr-primary-green);
 		color: var(--clr-neutral-white);
 		text-transform: uppercase;
