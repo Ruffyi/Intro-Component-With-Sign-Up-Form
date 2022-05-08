@@ -21,10 +21,10 @@
 		inputs.forEach(input => (input.value = ''));
 	};
 
-	const generateError = inner => {
+	const generateError = text => {
 		const error = document.createElement('p');
 		error.classList.add('error', 'u-active');
-		error.textContent = `${inner} can't be empty.`;
+		error.textContent = text;
 		return error;
 	};
 	const generateErrorIcon = () => {
@@ -34,11 +34,11 @@
 		return errorIcon;
 	};
 
-	const renderErrorItems = (item, input) => {
+	const renderErrorItems = (item, text) => {
 		const root = item;
 		clearError(root);
 		root.appendChild(generateErrorIcon());
-		root.appendChild(generateError(input.title));
+		root.appendChild(generateError(text));
 	};
 
 	const clearError = item => {
@@ -57,7 +57,10 @@
 	const renderErrors = emptyValues => {
 		emptyValues.forEach((emptyValue, index) => {
 			if (!emptyValue) {
-				renderErrorItems(inputsParentItems[index], inputs[index]);
+				renderErrorItems(
+					inputsParentItems[index],
+					`${inputs[index].title} can't be empty.`
+				);
 			} else {
 				clearError(inputsParentItems[index]);
 			}
@@ -78,13 +81,24 @@
 		}, 1000);
 	};
 
+	const validationData = () => {
+		const { email } = data;
+		console.log(email);
+		if (email.toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) === null) {
+			console.log('valid');
+			renderErrorItems(inputsParentItems[2], 'Provide a valid email!');
+			return false;
+		}
+		return true;
+	};
+
 	const sendFormToClient = () => {
 		const dataValues = Object.values(data);
 		const checkEmptyValues = checkEmptyValuesArray(dataValues);
 
 		renderErrors(checkEmptyValues);
 
-		if (!checkEmptyValues.includes(false)) {
+		if (!checkEmptyValues.includes(false) && validationData()) {
 			-sendData();
 
 			return;
