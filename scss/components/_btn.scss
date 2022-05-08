@@ -4,12 +4,19 @@
 	border-radius: 1rem;
 	box-shadow: 0 0.5rem 0 var(--clr-box-shadow);
 	font-family: inherit;
+	width: 100%;
+	height: 5rem;
+	font-size: 1.4rem;
 	&--trial {
-		width: 100%;
-		height: 10%;
-		font-size: 1.4rem;
 		background-color: var(--clr-accent-blue);
 		color: var(--clr-neutral-grayish-blue);
+	}
+	&--submit {
+		background-color: var(--clr-primary-green);
+		color: var(--clr-neutral-white);
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 2px;
 	}
 	&--text {
 		color: var(--clr-neutral-white);
